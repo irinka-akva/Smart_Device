@@ -1,26 +1,40 @@
 .btn {
+  font-family: $ff-roboto;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  align-items: center;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+
   display: inline-flex;
-  padding: 10px 20px;
+  padding: 10px 15px;
 
-  color: $color-default-white;
+  color: $color-alice-blue-2;
 
-  background-color: $color-neon-blue;
+  background-color: $color-transparent;
   border: none;
   cursor: pointer;
+  border-radius: 3px;
 
   transition: opacity $trans-default;
 
-  &--red {
-    background-color: $color-torch-red;
+  &--header {
+    border: 1px solid $color-alice-blue-2;
+    margin-bottom: 9px;
+    margin-top: 4px;
+    margin-right: 62px;
   }
 
-  &:disabled {
-    opacity: 0.5;
+  // &:disabled {
+  //   opacity: 0.5;
 
-    pointer-events: none;
-  }
+  //   pointer-events: none;
+  // }
 
-  @include hover-focus {
-    opacity: 0.8;
-  }
+  // @include hover-focus {
+  //   opacity: 0.8;
+  // }
 }
