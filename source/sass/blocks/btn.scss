@@ -26,15 +26,24 @@
     margin-bottom: 9px;
     margin-top: 4px;
     margin-right: 62px;
+    margin: auto 0;
+    max-width: 250px;
+
+    @include vp-1023 {
+      display: none;
+  }
+}
+
+  &:disabled {
+    opacity: 0.5;
+    pointer-events: none;
   }
 
-  // &:disabled {
-  //   opacity: 0.5;
+  &:hover, &:focus {
+    opacity: 0.5;
+  }
 
-  //   pointer-events: none;
-  // }
-
-  // @include hover-focus {
-  //   opacity: 0.8;
-  // }
-}
+  &:active {
+    opacity: 0.3;
+  }
+  }

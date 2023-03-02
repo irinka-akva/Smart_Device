@@ -4,38 +4,6 @@
   }
 }
 
-@mixin hover {
-  @media (hover: hover) {
-    &:hover:not(.focus-visible) {
-      @content;
-    }
-  }
-}
-
-@mixin focus {
-  &.focus-visible:focus {
-    @content;
-  }
-}
-
-@mixin active {
-  &.focus-visible:active {
-    @content;
-  }
-}
-
-@mixin hover-focus {
-  @media (hover: hover) {
-    &:hover:not(.focus-visible) {
-      @content;
-    }
-  }
-
-  &.focus-visible:focus {
-    @content;
-  }
-}
-
 @mixin pseudo ($display: block,
   $pos: absolute,
   $content: "") {
@@ -47,6 +15,24 @@
 // Desktop first
 @mixin vp-1919 {
   @media (max-width: ($vp-1920 - 1px)) {
+    @content;
+  }
+}
+
+@mixin vp-1699 {
+  @media (max-width: ($vp-1700 - 1px)) {
+    @content;
+  }
+}
+
+@mixin vp-1439 {
+  @media (max-width: ($vp-1440 - 1px)) {
+    @content;
+  }
+}
+
+@mixin vp-1279 {
+  @media (max-width: ($vp-1280 - 1px)) {
     @content;
   }
 }

@@ -22,6 +22,7 @@ $color-background-form :            rgba(4, 24, 39, 0.5); //треугольни
 $color-text-footer:                 rgba(255, 255, 255, 0.7); // текст в футере
 $color-social-icon:                 #F8FDFF; // иконки соцсетей
 $color-around-pop-up:               rgba(3, 16, 27, 0.7); // затемнение вокруг попапа
+$color-border:                      rgba(248, 253, 255, 0.7);
 
 // Gradient
 
@@ -56,6 +57,9 @@ $trans-600:                         0.6s $tf-default;
 $vp-320:                            320px;
 $vp-768:                            768px;
 $vp-1024:                           1024px;
+$vp-1280:                           1280px;
+$vp-1440:                           1440px;
+$vp-1700:                           1700px;
 $vp-1920:                           1920px;
 
 // Retina
