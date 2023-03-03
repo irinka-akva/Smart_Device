@@ -1,0 +1,115 @@
+.offer {
+  padding-top: 305px;
+  padding-bottom: 280px;
+  min-height: 880px;
+  width: auto;
+  background-color: $color-default-black;
+  background-image: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%),
+    url("../../img/background-desktop.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  @media (min-width: $vp-1024) {
+    @media (min-resolution: 2dppx) {
+      background-image: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%),
+        url("../../img/background-desktop-2x.jpg");
+      min-height: 880px;
+      width: auto;
+  }
+}
+
+  @include vp-1023 {
+    padding-top: 180px;
+    padding-bottom: 205px;
+    min-height: 640px;
+    background-image: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%),
+      url("../../img/background-tablet.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%),
+        url("../../img/background-tablet-2x.jpg");
+      min-height: 640px;
+      width: auto;
+    }
+  }
+
+  @include vp-767 {
+    padding-top: 150px;
+    padding-bottom: 190px;
+    min-height: 560px;
+    background-image: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%),
+      url("../../img/background-mobile.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%),
+        url("../../img/background-mobile-2x.jpg");
+      min-height: 560px;
+      width: auto;
+    }
+  }
+}
+
+.offer__title {
+  margin: 0;
+  margin-bottom: 40px;
+  font-family: $ff-roboto;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 80px;
+  line-height: 94px;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: $color-alice-blue-2;
+
+  @include vp-1023 {
+    font-size: 64px;
+    line-height: 75px;
+    margin-bottom: 20px;
+  }
+
+  @include vp-767 {
+    font-size: 34px;
+    line-height: 42px;
+  }
+}
+
+.offer__wrapper-content {
+  padding-left: 125px;
+
+  @include vp-1023 {
+    padding-left: 0;
+  }
+}
+
+.offer__text p {
+  margin: 0;
+  margin-bottom: 40px;
+  line-height: 34px;
+  color: $color-alice-blue-2;
+
+  @include vp-767 {
+    font-size: 14px;
+    line-height: 22px;
+    margin-bottom: 50px;
+
+    br {
+      display: none;
+    }
+  }
+}
+
+.offer__button-text {
+  @include vp-767 {
+    display: none;
+  }
+}
+
+.offer__button-text-mobile {
+  display: none;
+
+  @include vp-767 {
+    display: inline-block;
+    margin: auto;
+  }
+}

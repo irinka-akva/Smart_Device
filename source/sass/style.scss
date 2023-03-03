@@ -16,12 +16,18 @@
 // Blocks
 // ---------------------------------
 
+@import "blocks/accordion";
 @import "blocks/btn";
 @import "blocks/custom-input";
 @import "blocks/custom-toggle";
+@import "blocks/data-accordion";
+@import "blocks/form";
 @import "blocks/footer";
 @import "blocks/header";
+@import "blocks/main";
 @import "blocks/modal";
+@import "blocks/offer";
+@import "blocks/page";
 
 // ---------------------------------
 // адаптив пишем внутри каждого класса (смотрим container.scss)

@@ -26,8 +26,6 @@
 
 .footer__wrapper {
   width: 17.6%;
-  min-width: 215px;
-
 
   @include vp-1023 {
     width: 100%;
@@ -49,8 +47,9 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  width: 100%;
+  margin-bottom: 10px;
   max-width: $vp-1920;
+  width: 100%;
   margin: 0 auto;
   padding: 0 350px;
 
@@ -71,8 +70,6 @@
   }
 
   @include vp-767 {
-    flex-direction: column;
-    justify-content: center;
     padding: 0;
   }
 }
@@ -108,6 +105,9 @@
   display: grid;
   grid-template-columns: repeat(3, 40px);
   gap: 15px;
+}
+
+.footer__social-list-item {
   height: 40px;
 }
 
@@ -136,11 +136,12 @@
 .footer__contacts {
   color: $color-text-footer;
   padding-top: 5px;
+  margin-bottom: 10px;
 
   @include vp-767 {
-    border-top: 1px solid $color-border;
+    border-bottom: 1px solid $color-border;
     padding-top: 0;
-    padding-bottom: 20px;
+    margin-bottom: 0;
   }
 
   &--nav {
@@ -148,18 +149,16 @@
 
     @include vp-1023 {
       width: 52.2%;
-      min-width: none;
     }
 
     @include vp-767 {
       width: 100%;
-      min-width: 345px;
+      border-top: 1px solid $color-border;
     }
   }
 
   &--address {
     width: 28.3%;
-    min-width: 315px;
 
     @include vp-1023 {
       width: 47.8%;
@@ -167,7 +166,6 @@
 
     @include vp-767 {
       width: 100%;
-      border-bottom: 1px solid $color-border;
     }
   }
 }
@@ -215,27 +213,44 @@
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    max-height: 150px;
+    height: 130px;
+    overflow: hidden;
 
     @include vp-1023 {
-      max-height: none;
+      max-height: 0;
+      height: auto;
+    }
+
+    @include vp-767 {
+      flex-wrap: nowrap;
     }
   }
 }
 
 .footer__contacts-list-item:not(:last-child) {
   padding-bottom: 10px;
-  padding-right: 5px;
+}
 
+.footer__contacts-list-item:last-child {
   @include vp-767 {
-    padding-right: 0;
+    margin-bottom: 20px;
   }
 }
 
 .footer__contacts-list-item {
+
+  @include vp-1023 {
+    padding-right: 0;
+  }
+
   @include vp-767 {
     font-size: 14px;
     line-height: 19px;
+  }
+
+  &--nav {
+    max-width: 210px;
+    margin-right: 10px;
   }
 }
 

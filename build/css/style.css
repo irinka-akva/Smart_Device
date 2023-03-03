@@ -662,6 +662,13 @@ button,
   max-width: 250px;
 }
 
+.btn--offer {
+  background: #00B2FF;
+  font-size: 18px;
+  line-height: 21px;
+  padding: 15px 25px;
+}
+
 .btn:disabled {
   opacity: 0.5;
   pointer-events: none;
@@ -917,7 +924,6 @@ button,
 
 .footer__wrapper {
   width: 17.6%;
-  min-width: 215px;
 }
 
 .footer__container {
@@ -929,8 +935,9 @@ button,
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  width: 100%;
+  margin-bottom: 10px;
   max-width: 1920px;
+  width: 100%;
   margin: 0 auto;
   padding: 0 350px;
 }
@@ -960,6 +967,9 @@ button,
   -ms-grid-columns: (40px)[3];
   grid-template-columns: repeat(3, 40px);
   gap: 15px;
+}
+
+.footer__social-list-item {
   height: 40px;
 }
 
@@ -994,6 +1004,7 @@ button,
 .footer__contacts {
   color: rgba(255, 255, 255, 0.7);
   padding-top: 5px;
+  margin-bottom: 10px;
 }
 
 .footer__contacts--nav {
@@ -1002,7 +1013,6 @@ button,
 
 .footer__contacts--address {
   width: 28.3%;
-  min-width: 315px;
 }
 
 .footer__contacts-title {
@@ -1045,12 +1055,17 @@ button,
   flex-direction: column;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  max-height: 150px;
+  height: 130px;
+  overflow: hidden;
 }
 
 .footer__contacts-list-item:not(:last-child) {
   padding-bottom: 10px;
-  padding-right: 5px;
+}
+
+.footer__contacts-list-item--nav {
+  max-width: 210px;
+  margin-right: 10px;
 }
 
 .footer__contacts-list-link {
@@ -1189,6 +1204,10 @@ button,
   opacity: 0.3;
 }
 
+.main__wrapper-offer {
+  margin-top: -120px;
+}
+
 .modal {
   position: fixed;
   top: 0;
@@ -1301,11 +1320,67 @@ button,
   pointer-events: auto;
 }
 
+.offer {
+  padding-top: 305px;
+  padding-bottom: 280px;
+  min-height: 880px;
+  width: auto;
+  background-color: #041827;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(71.72%, rgba(25, 32, 36, 0.7)), to(rgba(25, 32, 36, 0))), url("../../img/background-desktop.jpg");
+  background-image: -o-linear-gradient(top, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), url("../../img/background-desktop.jpg");
+  background-image: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), url("../../img/background-desktop.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.offer__title {
+  margin: 0;
+  margin-bottom: 40px;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 80px;
+  line-height: 94px;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: #F2F5F7;
+}
+
+.offer__wrapper-content {
+  padding-left: 125px;
+}
+
+.offer__text p {
+  margin: 0;
+  margin-bottom: 40px;
+  line-height: 34px;
+  color: #F2F5F7;
+}
+
+.offer__button-text-mobile {
+  display: none;
+}
+
+.page {
+  scroll-behavior: smooth;
+}
+
 @media (min-width: 1024px) {
   .header__fixed {
     position: fixed;
     left: 0;
     top: 0;
+  }
+}
+
+@media (min-width: 1024px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 1024px) and (-o-min-device-pixel-ratio: 2/1), (min-width: 1024px) and (min-resolution: 2dppx) {
+  .offer {
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(71.72%, rgba(25, 32, 36, 0.7)), to(rgba(25, 32, 36, 0))), url("../../img/background-desktop-2x.jpg");
+    background-image: -o-linear-gradient(top, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), url("../../img/background-desktop-2x.jpg");
+    background-image: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), url("../../img/background-desktop-2x.jpg");
+    min-height: 880px;
+    width: auto;
   }
 }
 
@@ -1348,6 +1423,10 @@ button,
     display: none;
   }
 
+  .btn--offer {
+    margin-left: 50px;
+  }
+
   .footer {
     min-height: 465px;
     padding-top: 50px;
@@ -1377,7 +1456,6 @@ button,
 
   .footer__contacts--nav {
     width: 52.2%;
-    min-width: none;
   }
 
   .footer__contacts--address {
@@ -1385,7 +1463,12 @@ button,
   }
 
   .footer__contacts-list--nav {
-    max-height: none;
+    max-height: 0;
+    height: auto;
+  }
+
+  .footer__contacts-list-item {
+    padding-right: 0;
   }
 
   .header {
@@ -1431,12 +1514,123 @@ button,
   .header__contacts-list-text {
     display: none;
   }
+
+  .main__wrapper-offer {
+    margin-top: -100px;
+  }
+
+  .offer {
+    padding-top: 180px;
+    padding-bottom: 205px;
+    min-height: 640px;
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(71.72%, rgba(25, 32, 36, 0.7)), to(rgba(25, 32, 36, 0))), url("../../img/background-tablet.jpg");
+    background-image: -o-linear-gradient(top, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), url("../../img/background-tablet.jpg");
+    background-image: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), url("../../img/background-tablet.jpg");
+  }
+
+  .offer__title {
+    font-size: 64px;
+    line-height: 75px;
+    margin-bottom: 20px;
+  }
+
+  .offer__wrapper-content {
+    padding-left: 0;
+  }
+}
+
+@media (max-width: 1023px) and (-webkit-min-device-pixel-ratio: 2), (max-width: 1023px) and (-o-min-device-pixel-ratio: 2/1), (max-width: 1023px) and (min-resolution: 2dppx) {
+  .offer {
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(71.72%, rgba(25, 32, 36, 0.7)), to(rgba(25, 32, 36, 0))), url("../../img/background-tablet-2x.jpg");
+    background-image: -o-linear-gradient(top, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), url("../../img/background-tablet-2x.jpg");
+    background-image: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), url("../../img/background-tablet-2x.jpg");
+    min-height: 640px;
+    width: auto;
+  }
 }
 
 @media (max-width: 767px) {
   .container {
     padding: 0 25px;
     min-width: 320px;
+  }
+
+  .accordion__element:last-child {
+    margin-bottom: 0;
+  }
+
+  .accordion__element.is-active > .accordion__button {
+    opacity: 0.5;
+  }
+
+  .accordion__button {
+    position: relative;
+  }
+
+  .accordion__button-text::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 27px;
+    right: 26px;
+    width: 15px;
+    height: 1px;
+    background-color: #F8FDFF;
+  }
+
+  .accordion__button-text::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 27px;
+    right: 26px;
+    width: 15px;
+    height: 1.5px;
+    -webkit-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+    background-color: #F8FDFF;
+  }
+
+  .accordion__element.is-active .accordion__button-text::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 27px;
+    right: 26px;
+    width: 15px;
+    height: 1px;
+    background-color: #F8FDFF;
+  }
+
+  .accordion__element.is-active .accordion__button-text::after {
+    display: none;
+  }
+
+  .btn--offer {
+    font-size: 14px;
+    line-height: 16px;
+    padding: 10px 30px;
+    width: 100%;
+    margin-left: 0;
+  }
+
+  [data-accordion=element].is-active > [data-accordion=content] {
+    max-height: 100%;
+  }
+
+  [data-accordion=parent].no-transition [data-accordion=content] {
+    -webkit-transition: none;
+    -o-transition: none;
+    transition: none;
+  }
+
+  [data-accordion=content] {
+    max-height: 0;
+    -webkit-transition: max-height 0.3s;
+    -o-transition: max-height 0.3s;
+    transition: max-height 0.3s;
+    overflow: hidden;
   }
 
   .footer {
@@ -1465,13 +1659,6 @@ button,
   }
 
   .footer__container {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
     padding: 0;
   }
 
@@ -1480,19 +1667,18 @@ button,
   }
 
   .footer__contacts {
-    border-top: 1px solid rgba(248, 253, 255, 0.7);
+    border-bottom: 1px solid rgba(248, 253, 255, 0.7);
     padding-top: 0;
-    padding-bottom: 20px;
+    margin-bottom: 0;
   }
 
   .footer__contacts--nav {
     width: 100%;
-    min-width: 345px;
+    border-top: 1px solid rgba(248, 253, 255, 0.7);
   }
 
   .footer__contacts--address {
     width: 100%;
-    border-bottom: 1px solid rgba(248, 253, 255, 0.7);
   }
 
   .footer__contacts-title {
@@ -1511,8 +1697,13 @@ button,
     opacity: 0.3;
   }
 
-  .footer__contacts-list-item:not(:last-child) {
-    padding-right: 0;
+  .footer__contacts-list--nav {
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+  }
+
+  .footer__contacts-list-item:last-child {
+    margin-bottom: 20px;
   }
 
   .footer__contacts-list-item {
@@ -1548,6 +1739,10 @@ button,
     height: 35px;
   }
 
+  .main__wrapper-offer {
+    margin-top: -70px;
+  }
+
   .modal__wrapper {
     padding: 60px 16px;
   }
@@ -1559,6 +1754,39 @@ button,
 
   .modal--fit-content .modal__content {
     width: 100%;
+  }
+
+  .offer {
+    padding-top: 150px;
+    padding-bottom: 190px;
+    min-height: 560px;
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(71.72%, rgba(25, 32, 36, 0.7)), to(rgba(25, 32, 36, 0))), url("../../img/background-mobile.jpg");
+    background-image: -o-linear-gradient(top, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), url("../../img/background-mobile.jpg");
+    background-image: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), url("../../img/background-mobile.jpg");
+  }
+
+  .offer__title {
+    font-size: 34px;
+    line-height: 42px;
+  }
+
+  .offer__text p {
+    font-size: 14px;
+    line-height: 22px;
+    margin-bottom: 50px;
+  }
+
+  .offer__text p br {
+    display: none;
+  }
+
+  .offer__button-text {
+    display: none;
+  }
+
+  .offer__button-text-mobile {
+    display: inline-block;
+    margin: auto;
   }
 }
 
@@ -1605,5 +1833,15 @@ button,
 
   .custom-toggle:last-of-type {
     padding: 14px 0 58px 0;
+  }
+}
+
+@media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2), (max-width: 767px) and (-o-min-device-pixel-ratio: 2/1), (max-width: 767px) and (min-resolution: 2dppx) {
+  .offer {
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(71.72%, rgba(25, 32, 36, 0.7)), to(rgba(25, 32, 36, 0))), url("../../img/background-mobile-2x.jpg");
+    background-image: -o-linear-gradient(top, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), url("../../img/background-mobile-2x.jpg");
+    background-image: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), url("../../img/background-mobile-2x.jpg");
+    min-height: 560px;
+    width: auto;
   }
 }
