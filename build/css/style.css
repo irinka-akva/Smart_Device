@@ -627,6 +627,73 @@ button,
   padding: 0 350px;
 }
 
+.accordion__button-close {
+  display: none;
+}
+
+.accordion__element.is-active .accordion__button-open {
+  display: none;
+}
+
+.accordion__element.is-active .accordion__button-close {
+  display: inline-block;
+}
+
+.advantages {
+  padding-top: 120px;
+}
+
+.advantages__list {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 120px;
+  list-style-type: none;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  -webkit-column-gap: 31px;
+  -moz-column-gap: 31px;
+  column-gap: 31px;
+  row-gap: 29px;
+}
+
+.advantages__list-item {
+  padding: 40px 45px 35px 40px;
+  border: 1px solid #EBEBEB;
+  border-left: 5px solid #00B2FF;
+}
+
+.advantages__list-item:hover {
+  background-color: #00B2FF;
+  color: #F2F5F7;
+}
+
+.advantages__list-item:hover .advantages__icon,
+.advantages__list-item:hover .advantages__title {
+  color: #F2F5F7;
+}
+
+.advantages__icon {
+  color: #00B2FF;
+  margin-bottom: 20px;
+}
+
+.advantages__title {
+  margin: 0;
+  margin-bottom: 15px;
+  font-family: "Roboto Condensed";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 34px;
+  color: #00B2FF;
+}
+
+.advantages__text {
+  margin: 0;
+}
+
 .btn {
   font-family: "Roboto Condensed", "Arial", sans-serif;
   font-style: normal;
@@ -651,6 +718,15 @@ button,
   -webkit-transition: opacity 0.3s ease;
   -o-transition: opacity 0.3s ease;
   transition: opacity 0.3s ease;
+}
+
+.btn--info {
+  color: #00B2FF;
+  border: 1px solid #00B2FF;
+  padding: 14px 13px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  min-width: 180px;
 }
 
 .btn--header {
@@ -913,6 +989,32 @@ button,
 
 .custom-toggle .input-message.is-valid {
   color: #15ab07;
+}
+
+.company-info__wrapper {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 20.5% 79.5%;
+  grid-template-columns: 20.5% 79.5%;
+}
+
+.company-info__wrapper h2 {
+  margin: 0;
+  margin-bottom: 15px;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 51px;
+}
+
+.company-info__wrapper p {
+  margin: 0;
+  padding-bottom: 25px;
+}
+
+.company-info__btn-text {
+  margin: auto;
 }
 
 .footer {
@@ -1419,6 +1521,22 @@ button,
     padding: 0 50px;
   }
 
+  .advantages {
+    padding-top: 80px;
+  }
+
+  .advantages__list {
+    margin-bottom: 80px;
+    -webkit-column-gap: 29px;
+    -moz-column-gap: 29px;
+    column-gap: 29px;
+    row-gap: 30px;
+  }
+
+  .advantages__list-item {
+    padding: 40px 30px 35px 45px;
+  }
+
   .btn--header {
     display: none;
   }
@@ -1605,6 +1723,30 @@ button,
 
   .accordion__element.is-active .accordion__button-text::after {
     display: none;
+  }
+
+  .advantages {
+    padding-top: 50px;
+  }
+
+  .advantages__list {
+    margin-bottom: 50px;
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+  }
+
+  .advantages__list-item {
+    padding: 30px 30px 35px 30px;
+  }
+
+  .advantages__title {
+    font-size: 20px;
+    line-height: 28px;
+  }
+
+  .advantages__text {
+    font-size: 14px;
+    line-height: 19px;
   }
 
   .btn--offer {

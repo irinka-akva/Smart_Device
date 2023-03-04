@@ -21,6 +21,15 @@
 
   transition: opacity $trans-default;
 
+  &--info {
+    color: $color-deep-sky-blue;
+    border: 1px solid $color-deep-sky-blue;
+    padding: 14px 13px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    min-width: 180px;
+  }
+
   &--header {
     border: 1px solid $color-alice-blue-2;
     margin-bottom: 9px;

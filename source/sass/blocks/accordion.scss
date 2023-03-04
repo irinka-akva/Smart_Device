@@ -52,3 +52,15 @@
     }
   }
 }
+
+.accordion__button-close{
+  display: none;
+}
+
+.accordion__element.is-active .accordion__button-open{
+  display: none;
+}
+
+.accordion__element.is-active .accordion__button-close{
+  display: inline-block;
+}
