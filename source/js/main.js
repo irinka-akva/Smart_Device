@@ -1,8 +1,9 @@
 import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
 import {Form} from './modules/form-validate/form';
-import {addScroll} from './modules/header-scroll';
+import {scrollAddHandler} from './modules/header-scroll';
 import {initAccordions} from './modules/accordion/init-accordion';
+import {extraTextOpenAndCloseHandler} from './modules/show-more';
 
 // ---------------------------------
 
@@ -20,8 +21,9 @@ window.addEventListener('DOMContentLoaded', () => {
   // в load следует добавить скрипты, не участвующие в работе первого экрана
   window.addEventListener('load', () => {
     initAccordions();
-    addScroll();
+    scrollAddHandler();
     initModals();
+    extraTextOpenAndCloseHandler();
     const form = new Form();
     window.form = form;
     form.init();

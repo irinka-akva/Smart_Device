@@ -1,0 +1,188 @@
+.card {
+  position: relative;
+  min-height: 650px;
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.4;
+  }
+
+  @include vp-1023 {
+    min-height: 250px;
+  }
+}
+
+.card:nth-child(3n+1) {
+  background-image: url("../../img/card-desktop-background-1.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @media (min-width: $vp-1024) {
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../img/card-desktop-background-1-2x.jpg");
+      background-size: cover;
+    }
+  }
+
+  @include vp-1023 {
+    background-image: url("../../img/card-tablet-background-1.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../img/card-tablet-background-1-2x.jpg");
+      background-size: cover;
+    }
+  }
+
+  @include vp-767 {
+    background-image: url("../../img/card-mobile-background-1.jpg");
+
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../img/card-mobile-background-1-2x.jpg");
+      background-size: cover;
+    }
+  }
+}
+
+.card:nth-child(3n+2) {
+  background-image: url("../../img/card-desktop-background-2.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @media (min-width: $vp-1024) {
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../img/card-desktop-background-2-2x.jpg");
+      background-size: cover;
+    }
+  }
+
+  @include vp-1023 {
+    background-image: url("../../img/card-tablet-background-2.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../img/card-tablet-background-2-2x.jpg");
+      background-size: cover;
+    }
+  }
+
+  @include vp-767 {
+    background-image: url("../../img/card-mobile-background-2.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../img/card-mobile-background-2-2x.jpg");
+      background-size: cover;
+    }
+  }
+}
+
+.card:nth-child(3n+3) {
+  background-image: url("../../img/card-desktop-background-3.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @media (min-width: $vp-1024) {
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../img/card-desktop-background-3-2x.jpg");
+      background-size: cover;
+    }
+  }
+
+  @include vp-1023 {
+    background-image: url("../../img/card-tablet-background-3.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../img/card-tablet-background-3-2x.jpg");
+      background-size: cover;
+    }
+  }
+
+  @include vp-767 {
+    background-image: url("../../img/card-mobile-background-3.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../img/card-mobile-background-3-2x.jpg");
+      background-size: cover;
+    }
+  }
+}
+
+.card__link {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 50px 40px;
+  font-family: $ff-roboto;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;
+  color: $color-default-white;
+
+  &:hover,
+  &:focus {
+    opacity: 0.5;
+  }
+
+  &:active {
+    opacity: 0.4;
+  }
+
+  &::before {
+    @include pseudo();
+    width: 60px;
+    height: 60px;
+    bottom: 0;
+    right: 0;
+    background-color: $color-deep-sky-blue;
+    background-image: url("../../img/svg/arrow-right.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 4px 8px;
+
+    @include vp-767 {
+      width: 40px;
+      height: 40px;
+      background-size: 3px 6px;
+    }
+  }
+
+  @include vp-1023 {
+    padding: 40px 45px;
+  }
+
+  @include vp-767 {
+    font-size: 18px;
+    line-height: 30px;
+    padding: 30px 30px;
+  }
+}
+
+.card__text {
+
+  &--br {
+    br {
+      display: none;
+    }
+
+    @include vp-1023 {
+      br {
+        display: inline;
+      }
+    }
+  }
+
+  &--br-mobile {
+    @include vp-1023 {
+      br {
+        display: none;
+      }
+    }
+  }
+}

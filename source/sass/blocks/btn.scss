@@ -28,6 +28,21 @@
     margin-top: 20px;
     margin-bottom: 20px;
     min-width: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @include vp-1023 {
+      margin-top: 0;
+      min-width: auto;
+      width: 36.4%;
+    }
+
+    @include vp-767 {
+      margin-top: 0;
+      padding: 8px 15px;
+      width: 59.3%;
+    }
   }
 
   &--header {

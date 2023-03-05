@@ -1,0 +1,12 @@
+.questions-form {
+
+  &::before {
+    @include pseudo();
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-top: 650px solid rgba(4, 24, 39, 0.5);;
+    border-right: 850px solid transparent;
+  }
+}
