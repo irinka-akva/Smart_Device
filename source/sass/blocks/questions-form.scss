@@ -2,11 +2,205 @@
 
   &::before {
     @include pseudo();
-    top: 0;
-    left: 0;
-    width: 0;
-    height: 0;
-    border-top: 650px solid rgba(4, 24, 39, 0.5);;
-    border-right: 850px solid transparent;
+    top: 55%;
+    left: 18%;
+    transform: translate(0, -50%);
+    width: 26.56%;
+    height: 60%;
+    background-image: url("../../img/svg/airplane.svg");
+    background-repeat: no-repeat;
+    background-size: 100% auto;
   }
+
+  &--modal {
+    &::before {
+      display: none;
+    }
+  }
+
+  @include vp-1023 {
+    &::before {
+      display: none;
+    }
+  }
+}
+
+.questions-form__personal-data-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 8.5%;
+  row-gap: 15px;
+
+  &--modal {
+    grid-template-columns: 1fr;
+    row-gap: 20px;
+  }
+
+  @include vp-1023 {
+    grid-template-columns: 39.6% 47.8%;
+    column-gap: 12.6%;
+    row-gap: 15px;
+  }
+
+  @include vp-767 {
+    grid-template-columns: 1fr;
+    row-gap: 25px;
+  }
+}
+
+.questions-form__checkbox-wrapper {
+  font-size: 14px;
+  line-height: 16px;
+  color: $color-default-white;
+  opacity: 0.8;
+  display: flex;
+  align-items: flex-end;
+}
+
+.questions-form fieldset {
+  margin: 0;
+  margin-bottom: 35px;
+  padding: 0;
+  border: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 30px;
+  row-gap: 20px;
+
+  @include vp-767 {
+    grid-template-columns: 1fr;
+    margin-bottom: 30px;
+  }
+}
+
+.questions-form--modal fieldset {
+  margin: 0;
+  margin-bottom: 25px;
+  padding: 0;
+  border: none;
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 20px;
+}
+
+.questions-form__textarea {
+  grid-column: 1/3;
+
+  &--modal {
+    grid-column: 1/2;
+  }
+
+  @include vp-767 {
+    grid-column: 1/2;
+  }
+}
+
+.questions-form textarea {
+  display: block;
+  width: 100%;
+  background: $color-form;
+  border-radius: 3px;
+  padding: 25px 15px;
+  border: 2px solid $color-transparent;
+  min-height: 155px;
+  color: $color-black-pearl;
+
+  &::placeholder {
+    font-family: $ff-mono;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    color: $color-default-white;
+  }
+
+  @include vp-1023 {
+    padding: 32px 15px;
+  }
+
+  @include vp-767 {
+    padding: 25px 15px;
+    min-height: 180px;
+  }
+}
+
+.questions-form input {
+  display: block;
+  width: 100%;
+  background: $color-form;
+  border-radius: 3px;
+  padding: 15px;
+  color: $color-black-pearl;
+  border: 2px solid $color-transparent;
+
+  &::placeholder {
+    font-family: $ff-mono;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    color: $color-default-white;
+  }
+}
+
+.questions-form input,
+.questions-form textarea {
+  &:hover {
+    border-color: $color-background-form;
+  }
+
+  &:focus {
+    border-color: $color-alice-blue;
+    outline: none;
+  }
+
+  &:disabled {
+    opacity: 0.4;
+  }
+}
+
+.questions-form__checkbox-wrapper label {
+  position: relative;
+  padding-left: 26px;
+  cursor: pointer;
+}
+
+.questions-form__control-mark {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  left: 0;
+  width: 15px;
+  height: 15px;
+  background-color: $color-transparent;
+  border: 1px solid $color-default-white;
+  border-radius: 2px;
+}
+
+.questions-form__checkbox-wrapper input:checked+.questions-form__control-mark::before {
+  @include pseudo ();
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 7px;
+  height: 5px;
+  background-image: url("../../img/svg/tick.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.questions-form__checkbox-wrapper input:not(:disabled):hover+.questions-form__control-mark {
+  border-color: $color-background-form;
+}
+
+.questions-form__checkbox-wrapper input:not(:disabled):focus+.questions-form__control-mark {
+  border-color: $color-background-form;
+}
+
+.questions-form__checkbox-wrapper input:disabled+.questions-form__control-mark,
+.questions-form__checkbox-wrapper input:disabled~.questions-form__checkbox-text {
+  opacity: 0.4;
 }

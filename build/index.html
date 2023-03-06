@@ -37,7 +37,7 @@
             </li>
           </ul>
         </div>
-        <button class="header__btn btn btn--header">Заказать звонок</button>
+        <a class="header__btn btn btn--header" href="#" data-open-modal="feedback">Заказать звонок</a>
       </div>
     </header>
     <main class="main" data-scroll="main">
@@ -164,36 +164,43 @@
 
       <section class="form" id="form">
         <div class="container">
-          <h2 class="visually-hidden">Форма обратной связи.</h2>
-          <span class="form__title">Остались вопросы? Задайте их нам!</span>
-          <span class="form__text">Мы проконсультируем Вас бесплатно</span>
-          <form class="questions-form" action="https://echo.htmlacademy.ru/" method="get">
-            <fieldset>
-              <div>
-                  <input type="text" name="name" placeholder="Имя" aria-label="Укажите свое имя." required>
-                  <input type="tel" name="phone-number" placeholder="Телефон" aria-label="Укажите свой номер телефона." required>
-              </div>
-                <textarea rows="7" cols="35" name="question" placeholder="Ваш вопрос" aria-label="Задайте нам вопрос."></textarea>
-            </fieldset>
-            <label>
-              <input type="checkbox" name="personal-data" checked required>
-              <span></span>
-              <span>Я согласен на обработку персональных данных</span>
-            </label>
-            <button type="submit">Задать вопрос</button>
-          </form>
+          <div class="form__wrapper">
+            <h2 class="visually-hidden">Форма обратной связи.</h2>
+            <span class="form__title">Остались вопросы? Задайте их нам!</span>
+            <span class="form__text">Мы проконсультируем Вас бесплатно</span>
+            <div data-form-validate data-callback="callback">
+              <form class="questions-form" action="https://echo.htmlacademy.ru/" method="get">
+                <fieldset data-on-input-validate>
+                  <div class="questions-form__input custom-input" data-validate-type="text" data-limitation="name"
+                    data-message-base="Обязательное поле"
+                    data-message-extra="Проверьте корректность заполнения поля" data-required>
+                    <input type="text" name="name" placeholder="Имя" aria-label="Укажите свое имя." required>
+                  </div>
+                  <div class="custom-input" data-validate-type="phone" data-message-extra="Поле заполнено не верно" data-message-base="Обязательное поле" data-message-success="Поле заполнено верно"
+                   data-on-input-validate data-required>
+                    <input type="tel" name="phone-number" placeholder="Телефон"
+                      aria-label="Укажите свой номер телефона." required>
+                  </div>
+                  <div class="questions-form__textarea custom-textarea" data-validate-type="text">
+                    <textarea name="question" placeholder="Ваш вопрос" aria-label="Задайте нам вопрос."
+                      ></textarea>
+                  </div>
+                </fieldset>
+                <div class="questions-form__personal-data-wrapper">
+                  <div class="questions-form__checkbox-wrapper custom-toggle custom-toggle--checkbox" data-on-input-validate data-validate-type="checkbox" data-message-base="Обязательно к заполнению">
+                    <label>
+                      <input class="visually-hidden" type="checkbox" name="personal-data" checked required>
+                      <span class="questions-form__control-mark custom-toggle__icon"></span>
+                      <span class="questions-form__checkbox-text custom-toggle__label">Я согласен на обработку персональных данных</span>
+                    </label>
+                  </div>
+                  <button class="btn btn--submit" type="submit">Задать вопрос</button>
+                </div>
+              </form>
+            </div>
+          </div>
         </div>
       </section>
-
-      <!-- <section class="intro container">
-        <div class="container">
-          <p><a class="btn" href="#" data-open-modal="feedback">modal--feedback link</a></p>
-          <p><a class="btn" href="#" data-open-modal="success">modal--success link</a></p>
-        </div>
-      </section> -->
-    </main>
-  </div>
-
   <footer class="footer">
     <div class="footer__container accordion" data-accordion="parent" data-single data-destroy="(max-width: 767px)">
       <div class="footer__wrapper footer__container-paddings">
@@ -227,7 +234,6 @@
             </a>
         </ul>
       </div>
-
       <nav class="footer__contacts footer__contacts--nav">
         <div class="footer__container-paddings accordion__element" data-accordion="element">
           <h2 class="visually-hidden">Навигация сайта.</h2>
@@ -303,33 +309,51 @@
 
 
   <!-- Модалки -->
-  <div class="modal modal--preload" data-modal="feedback">
+  <span class="modal modal--preload" data-modal="feedback">
+    <h1 class="visually-hidden">Модальное окно с формой обратной связи</h1>
     <div class="modal__wrapper">
       <div class="modal__overlay" data-close-modal></div>
       <div class="modal__content">
-        <p class="modal__description">Обычная модалка</p>
-        <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап" data-close-modal>
-          <svg width="15" height="15">
-            <use xlink:href="img/sprite.svg#icon-close"></use>
+        <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть модальное окно" data-close-modal>
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+            <use href="img/sprite.svg#icon-close"></use>
           </svg>
         </button>
+        <span class="modal__title">Закажите звонок</span>
+          <span class="modal__text">Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</span>
+          <div data-form-validate data-callback="callback">
+            <form class="questions-form questions-form--modal" action="https://echo.htmlacademy.ru/" method="get">
+              <fieldset data-on-input-validate>
+                <div class="questions-form__input custom-input" data-validate-type="text" data-limitation="name"
+                  data-message-base="Обязательное поле"
+                  data-message-extra="Проверьте корректность заполнения поля" data-required>
+                  <input type="text" name="name" placeholder="Имя" aria-label="Укажите свое имя." required>
+                </div>
+                <div class="custom-input" data-validate-type="phone" data-message-extra="Поле заполнено не верно" data-message-base="Обязательное поле" data-message-success="Поле заполнено верно"
+                 data-on-input-validate data-required>
+                  <input type="tel" name="phone-number" placeholder="Телефон"
+                    aria-label="Укажите свой номер телефона." required>
+                </div>
+                <div class="questions-form__textarea questions-form__textarea--modal custom-textarea" data-validate-type="text">
+                  <textarea name="question" placeholder="Ваш вопрос" aria-label="Задайте нам вопрос."
+                    ></textarea>
+                </div>
+              </fieldset>
+              <div class="questions-form__personal-data-wrapper questions-form__personal-data-wrapper--modal">
+                <div class="questions-form__checkbox-wrapper custom-toggle custom-toggle--checkbox" data-on-input-validate data-validate-type="checkbox" data-message-base="Обязательно к заполнению">
+                  <label>
+                    <input class="visually-hidden" type="checkbox" name="personal-data" checked required>
+                    <span class="questions-form__control-mark custom-toggle__icon"></span>
+                    <span class="questions-form__checkbox-text custom-toggle__label">Я согласен на обработку персональных данных</span>
+                  </label>
+                </div>
+                <button class="btn btn--submit" type="submit">Отправить</button>
+              </div>
+            </form>
+          </div>
       </div>
     </div>
-  </div>
-
-  <div class="modal modal--preload modal--fit-content modal--no-scale" data-modal="success">
-    <div class="modal__wrapper">
-      <div class="modal__overlay" data-close-modal></div>
-      <div class="modal__content">
-        <p class="modal__description">Размер этой модалки зависит от ширины контента,<br> отключена анимация-скейл</p>
-        <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап" data-close-modal>
-          <svg width="15" height="15">
-            <use xlink:href="img/sprite.svg#icon-close"></use>
-          </svg>
-        </button>
-      </div>
-    </div>
-  </div>
+  </span>
 
   <script src="js/vendor.min.js"></script>
   <script src="js/main.min.js"></script>

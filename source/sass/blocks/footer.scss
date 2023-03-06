@@ -48,22 +48,10 @@
   flex-wrap: wrap;
   justify-content: space-between;
   margin-bottom: 10px;
-  max-width: $vp-1920;
+  max-width: $vp-1280;
   width: 100%;
   margin: 0 auto;
-  padding: 0 350px;
-
-  @include vp-1699 {
-    padding: 0 200px;
-  }
-
-  @include vp-1439 {
-    padding: 0 120px;
-  }
-
-  @include vp-1279 {
-    padding: 0 50px;
-  }
+  padding: 0 30px;
 
   @include vp-1023 {
     padding: 0 50px;

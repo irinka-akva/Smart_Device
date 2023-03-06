@@ -11,7 +11,7 @@
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
 
-  background-color: rgba($color-default-black, 0.8);
+  background-color: $color-around-pop-up;
   transform: scale(1.2);
   visibility: hidden;
   opacity: 0;
@@ -39,10 +39,6 @@
     width: 100%;
     min-height: 100%;
     padding: 60px 40px;
-
-    @include vp-767 {
-      padding: 60px 16px;
-    }
   }
 
   &__overlay {
@@ -59,15 +55,10 @@
   &__content {
     position: relative;
 
-    width: 600px;
+    width: 500px;
     padding: 40px;
 
-    background-color: $color-default-white;
-
-    @include vp-767 {
-      width: 100%;
-      padding: 20px;
-    }
+    background-color: $color-modal;
   }
 
   &__close-btn {
@@ -81,8 +72,18 @@
     padding: 0;
 
     background: $color-transparent;
+    color: $color-default-white;
     border: none;
     cursor: pointer;
+
+    &:hover,
+    &:focus {
+      color: $color-background-form;
+    }
+
+    &:active {
+      color: $color-default-black;
+    }
   }
 
   &--responsive {
@@ -94,10 +95,6 @@
   &--fit-content {
     .modal__content {
       width: auto;
-
-      @include vp-767 {
-        width: 100%;
-      }
     }
   }
 
@@ -116,4 +113,22 @@
 
     pointer-events: auto;
   }
+}
+
+.modal__title {
+  display: block;
+  margin-bottom: 15px;
+  font-family: $ff-roboto;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 42px;
+  color: $color-default-white;
+}
+
+.modal__text {
+  display: block;
+  margin-bottom: 40px;
+
+  color: $color-default-white;
 }
