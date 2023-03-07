@@ -3,7 +3,8 @@
 
   &.is-invalid {
     label span {
-      color: #ff1553;
+      color: #ff0000;
+      line-height: 22px;
     }
   }
 
@@ -15,6 +16,7 @@
 
     &.is-invalid {
       color: #ff0000;
+      line-height: 22px;
     }
   }
 }

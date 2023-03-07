@@ -945,7 +945,8 @@ button,
 }
 
 .custom-toggle.is-invalid label span {
-  color: #ff1553;
+  color: #ff0000;
+  line-height: 22px;
 }
 
 .custom-toggle .input-message {
@@ -957,6 +958,7 @@ button,
 
 .custom-toggle .input-message.is-invalid {
   color: #ff0000;
+  line-height: 22px;
 }
 
 .company-info__wrapper {
@@ -1374,7 +1376,6 @@ button,
   font-size: 14px;
   line-height: 16px;
   color: #ffffff;
-  opacity: 0.8;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1400,14 +1401,14 @@ button,
 
 .questions-form--modal fieldset {
   margin: 0;
-  margin-bottom: 25px;
+  margin-bottom: 30px;
   padding: 0;
   border: none;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr;
   grid-template-columns: 1fr;
-  row-gap: 20px;
+  row-gap: 15px;
 }
 
 .questions-form__textarea {
@@ -1476,6 +1477,10 @@ button,
   font-size: 16px;
   line-height: 22px;
   color: #ffffff;
+}
+
+.questions-form--modal textarea {
+  padding: 25px 15px;
 }
 
 .questions-form input {
@@ -1555,6 +1560,10 @@ button,
   cursor: pointer;
 }
 
+.questions-form__checkbox-wrapper--modal label {
+  padding-left: 35px;
+}
+
 .questions-form__control-mark {
   position: absolute;
   top: 0;
@@ -1566,6 +1575,10 @@ button,
   background-color: rgba(255, 255, 255, 0);
   border: 1px solid #ffffff;
   border-radius: 2px;
+}
+
+.questions-form__control-mark--modal {
+  left: 10px;
 }
 
 .questions-form__checkbox-wrapper input:checked + .questions-form__control-mark::before {
@@ -1669,12 +1682,13 @@ button,
   width: 500px;
   padding: 40px;
   background-color: #00b3ff;
+  border-radius: 3px;
 }
 
 .modal__close-btn {
   position: absolute;
-  top: 22px;
-  right: 22px;
+  top: 20px;
+  right: 17px;
   z-index: 1;
   width: 40px;
   height: 40px;
@@ -1725,7 +1739,7 @@ button,
 
 .modal__title {
   display: block;
-  margin-bottom: 15px;
+  margin-bottom: 2px;
   font-family: "Roboto Condensed", "Arial", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -2194,8 +2208,8 @@ button,
     content: "";
     display: block;
     position: absolute;
-    top: 27px;
-    right: 26px;
+    top: 26px;
+    right: 2px;
     width: 15px;
     height: 1px;
     background-color: #f8fdff;
@@ -2205,8 +2219,8 @@ button,
     content: "";
     display: block;
     position: absolute;
-    top: 27px;
-    right: 26px;
+    top: 26px;
+    right: 2px;
     width: 15px;
     height: 1.5px;
     -webkit-transform: rotate(90deg);
@@ -2219,8 +2233,8 @@ button,
     content: "";
     display: block;
     position: absolute;
-    top: 27px;
-    right: 26px;
+    top: 26px;
+    right: 2px;
     width: 15px;
     height: 1px;
     background-color: #f8fdff;
@@ -2245,15 +2259,35 @@ button,
     min-height: 325px;
   }
 
+  .advantages__list-item:nth-child(-n+2) {
+    min-height: 340px;
+  }
+
   .advantages__icon {
     width: 30px;
     height: 30px;
+  }
+
+  .advantages__icon--privacy {
+    margin-bottom: 13px;
+  }
+
+  .advantages__icon--cost {
+    margin-bottom: 13px;
   }
 
   .advantages__title {
     font-size: 20px;
     line-height: 28px;
     margin-bottom: 10px;
+  }
+
+  .advantages__title--privacy {
+    margin-bottom: 13px;
+  }
+
+  .advantages__title--cost {
+    margin-bottom: 13px;
   }
 
   .advantages__text {
@@ -2277,14 +2311,14 @@ button,
   }
 
   .catalog {
-    padding-top: 50px;
+    padding-top: 45px;
     padding-bottom: 86px;
   }
 
   .catalog__title {
     font-size: 28px;
     line-height: 39px;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
   }
 
   .catalog__title-text--desktop {
@@ -2316,7 +2350,7 @@ button,
   .card__link {
     font-size: 18px;
     line-height: 30px;
-    padding: 30px 30px;
+    padding: 25px 30px;
   }
 
   .company-info__wrapper {
@@ -2363,17 +2397,17 @@ button,
 
   .form {
     background-image: none;
-    padding-bottom: 90px;
+    padding-bottom: 87px;
   }
 
   .form__title {
-    margin-bottom: 20px;
+    margin-bottom: 7px;
     font-size: 30px;
     line-height: 42px;
   }
 
   .form__text {
-    margin-bottom: 40px;
+    margin-bottom: 32px;
     font-size: 14px;
     line-height: 19px;
   }
@@ -2408,7 +2442,7 @@ button,
   }
 
   .footer__logo-link {
-    margin-bottom: 15px;
+    margin-bottom: 12px;
   }
 
   .footer__contacts {
@@ -2446,8 +2480,16 @@ button,
     flex-wrap: nowrap;
   }
 
+  .footer__contacts-list-item:not(:last-child) {
+    padding-bottom: 20px;
+  }
+
+  .footer__contacts-list-item--tel:not(:last-child) {
+    padding-bottom: 10px;
+  }
+
   .footer__contacts-list-item:last-child {
-    margin-bottom: 20px;
+    padding-bottom: 20px;
   }
 
   .footer__contacts-list-item {
@@ -2493,7 +2535,8 @@ button,
   .questions-form fieldset {
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
-    margin-bottom: 30px;
+    margin-bottom: 29px;
+    row-gap: 18px;
   }
 
   .questions-form__textarea {
@@ -2503,8 +2546,18 @@ button,
   }
 
   .questions-form textarea {
-    padding: 25px 15px;
+    padding: 20px 15px;
     min-height: 180px;
+  }
+
+  .questions-form__checkbox-wrapper label {
+    padding-left: 30px;
+  }
+
+  .questions-form__control-mark {
+    left: 5px;
+    top: 5px;
+    bottom: auto;
   }
 
   .main__wrapper-offer {

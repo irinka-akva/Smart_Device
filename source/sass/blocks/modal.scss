@@ -59,12 +59,13 @@
     padding: 40px;
 
     background-color: $color-modal;
+    border-radius: 3px;
   }
 
   &__close-btn {
     position: absolute;
-    top: 22px;
-    right: 22px;
+    top: 20px;
+    right: 17px;
     z-index: 1;
 
     width: 40px;
@@ -117,7 +118,7 @@
 
 .modal__title {
   display: block;
-  margin-bottom: 15px;
+  margin-bottom: 2px;
   font-family: $ff-roboto;
   font-style: normal;
   font-weight: 400;
