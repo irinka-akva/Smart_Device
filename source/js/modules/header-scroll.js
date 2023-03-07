@@ -20,4 +20,3 @@ const scrollAddHandler = () => {
 };
 
 export {scrollAddHandler};
-

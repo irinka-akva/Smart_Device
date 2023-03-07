@@ -17,6 +17,7 @@
 }
 
 .card:nth-child(3n+1) {
+  background-color: $color-black-pearl;
   background-image: url("../../img/card-desktop-background-1.jpg");
   background-position: center;
   background-repeat: no-repeat;
@@ -50,6 +51,7 @@
 }
 
 .card:nth-child(3n+2) {
+  background-color: $color-black-pearl;
   background-image: url("../../img/card-desktop-background-2.jpg");
   background-position: center;
   background-repeat: no-repeat;
@@ -82,6 +84,7 @@
 }
 
 .card:nth-child(3n+3) {
+  background-color: $color-black-pearl;
   background-image: url("../../img/card-desktop-background-3.jpg");
   background-position: center;
   background-repeat: no-repeat;
@@ -165,7 +168,6 @@
 }
 
 .card__text {
-
   &--br {
     br {
       display: none;

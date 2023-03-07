@@ -1,10 +1,10 @@
 .catalog {
-  padding-top: 70px;
+  padding-top: 65px;
   padding-bottom: 140px;
   background-color: $color-default-black;
 
   @include vp-1023 {
-    padding-top: 60px;
+    padding-top: 55px;
     padding-bottom: 75px;
   }
 
@@ -16,13 +16,17 @@
 
 .catalog__title {
   margin: 0;
-  margin-bottom: 50px;
+  margin-bottom: 52px;
   font-family: $ff-roboto;
   font-style: normal;
   font-weight: 400;
   font-size: 36px;
   line-height: 51px;
   color: $color-default-white;
+
+  @include vp-1023 {
+    margin-bottom: 35px;
+  }
 
   @include vp-767 {
     font-size: 28px;
@@ -32,7 +36,6 @@
 }
 
 .catalog__title-text {
-
   @include vp-767 {
     &--desktop {
       display: none;

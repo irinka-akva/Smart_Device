@@ -1,11 +1,10 @@
 @include vp-767 {
   .accordion {
-
     &__element:last-child {
       margin-bottom: 0;
     }
 
-    &__element.is-active>&__button {
+    &__element.is-active > &__button {
       opacity: 0.5;
     }
 
@@ -15,7 +14,6 @@
   }
 
   .accordion__button-text {
-
     &::before {
       @include pseudo ();
       top: 27px;
@@ -37,7 +35,6 @@
   }
 
   .accordion__element.is-active .accordion__button-text {
-
     &::before {
       @include pseudo ();
       top: 27px;

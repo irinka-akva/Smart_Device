@@ -26,6 +26,7 @@
 
 .footer__wrapper {
   width: 17.6%;
+  min-width: 215px;
 
   @include vp-1023 {
     width: 100%;
@@ -33,6 +34,7 @@
     flex-wrap: wrap;
     justify-content: space-between;
     margin-bottom: 35px;
+    min-width: auto;
   }
 
   @include vp-767 {
@@ -47,7 +49,6 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin-bottom: 10px;
   max-width: $vp-1280;
   width: 100%;
   margin: 0 auto;
@@ -64,7 +65,7 @@
 
 .footer__logo-link {
   display: inline-block;
-  margin-bottom: 30px;
+  margin-bottom: 22px;
   width: 215px;
   height: 55px;
 
@@ -89,10 +90,17 @@
 .footer__social-list {
   margin: 0;
   padding: 0;
+  padding-left: 10px;
   list-style-type: none;
   display: grid;
   grid-template-columns: repeat(3, 40px);
   gap: 15px;
+
+  @include vp-1023 {
+    padding-left: 0;
+    margin-right: -5px;
+    margin-top: 3px;
+  }
 }
 
 .footer__social-list-item {
@@ -126,17 +134,22 @@
   padding-top: 5px;
   margin-bottom: 10px;
 
+  @include vp-1023 {
+    padding-top: 0;
+  }
+
   @include vp-767 {
     border-bottom: 1px solid $color-border;
-    padding-top: 0;
     margin-bottom: 0;
   }
 
   &--nav {
-    width: 38.5%;
+    width: 49.2%;
+    min-width: 430px;
 
     @include vp-1023 {
       width: 52.2%;
+      min-width: auto;
     }
 
     @include vp-767 {
@@ -175,6 +188,18 @@
   background-color: $color-transparent;
   border: none;
 
+  &--nav {
+    padding-left: 21.7%;
+
+    @include vp-1023 {
+      padding-left: 0;
+    }
+  }
+
+  @include vp-1023 {
+    padding-left: 0;
+  }
+
   @include vp-767 {
     margin: 0;
     padding: 20px 0;
@@ -199,14 +224,17 @@
 
   &--nav {
     display: flex;
+    align-content: space-between;
     flex-direction: column;
     flex-wrap: wrap;
-    height: 130px;
+    height: 150px;
     overflow: hidden;
+    padding-left: 21.7%;
 
     @include vp-1023 {
       max-height: 0;
       height: auto;
+      padding-left: 0;
     }
 
     @include vp-767 {
@@ -216,7 +244,17 @@
 }
 
 .footer__contacts-list-item:not(:last-child) {
-  padding-bottom: 10px;
+  padding-bottom: 7px;
+
+  @include vp-1023 {
+    padding-bottom: 7.5px;
+  }
+}
+
+.footer__contacts-list-item--tel:not(:last-child) {
+  @include vp-1023 {
+    padding-bottom: 5px;
+  }
 }
 
 .footer__contacts-list-item:last-child {
@@ -226,7 +264,7 @@
 }
 
 .footer__contacts-list-item {
-
+  word-wrap: break-word;
   @include vp-1023 {
     padding-right: 0;
   }
@@ -237,8 +275,14 @@
   }
 
   &--nav {
-    max-width: 210px;
-    margin-right: 10px;
+    width: 48.2%;
+    max-width: 220px;
+    min-width: 208;
+
+    @include vp-1023 {
+      min-width: auto;
+      width: auto;
+    }
   }
 }
 
