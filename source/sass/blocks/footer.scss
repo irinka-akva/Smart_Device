@@ -189,10 +189,10 @@
   border: none;
 
   &--nav {
-    padding-left: 21.7%;
+    margin-left: 21.7%;
 
     @include vp-1023 {
-      padding-left: 0;
+      margin-left: 0;
     }
   }
 
@@ -273,6 +273,7 @@
 
 .footer__contacts-list-item {
   word-wrap: break-word;
+
   @include vp-1023 {
     padding-right: 0;
   }

@@ -4,7 +4,6 @@
   &.is-invalid {
     label span {
       color: #ff0000;
-      line-height: 22px;
     }
   }
 
@@ -16,7 +15,19 @@
 
     &.is-invalid {
       color: #ff0000;
-      line-height: 22px;
+    }
+  }
+}
+
+.custom-toggle--modal {
+  .input-message {
+    position: absolute;
+    right: 0;
+    bottom: -20px;
+    font-size: 14px;
+
+    &.is-invalid {
+      color: #ff0000;
     }
   }
 }

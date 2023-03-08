@@ -946,7 +946,6 @@ button,
 
 .custom-toggle.is-invalid label span {
   color: #ff0000;
-  line-height: 22px;
 }
 
 .custom-toggle .input-message {
@@ -958,7 +957,17 @@ button,
 
 .custom-toggle .input-message.is-invalid {
   color: #ff0000;
-  line-height: 22px;
+}
+
+.custom-toggle--modal .input-message {
+  position: absolute;
+  right: 0;
+  bottom: -20px;
+  font-size: 14px;
+}
+
+.custom-toggle--modal .input-message.is-invalid {
+  color: #ff0000;
 }
 
 .company-info__wrapper {
@@ -1150,7 +1159,7 @@ button,
 }
 
 .footer__contacts-title--nav {
-  padding-left: 21.7%;
+  margin-left: 21.7%;
 }
 
 .footer__contacts-list {
@@ -2027,7 +2036,7 @@ button,
   }
 
   .footer__contacts-title--nav {
-    padding-left: 0;
+    margin-left: 0;
   }
 
   .footer__contacts-title {

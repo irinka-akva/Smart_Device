@@ -95,7 +95,6 @@
 
   &--modal {
     grid-column: 1/2;
-
   }
 
   @include vp-767 {
@@ -208,7 +207,7 @@
   left: 10px;
 }
 
-.questions-form__checkbox-wrapper input:checked+.questions-form__control-mark::before {
+.questions-form__checkbox-wrapper input:checked + .questions-form__control-mark::before {
   @include pseudo ();
   top: 0;
   left: 0;
@@ -222,15 +221,15 @@
   background-position: center;
 }
 
-.questions-form__checkbox-wrapper input:not(:disabled):hover+.questions-form__control-mark {
+.questions-form__checkbox-wrapper input:not(:disabled):hover + .questions-form__control-mark {
   border-color: $color-background-form;
 }
 
-.questions-form__checkbox-wrapper input:not(:disabled):focus+.questions-form__control-mark {
+.questions-form__checkbox-wrapper input:not(:disabled):focus + .questions-form__control-mark {
   border-color: $color-background-form;
 }
 
-.questions-form__checkbox-wrapper input:disabled+.questions-form__control-mark,
-.questions-form__checkbox-wrapper input:disabled~.questions-form__checkbox-text {
+.questions-form__checkbox-wrapper input:disabled + .questions-form__control-mark,
+.questions-form__checkbox-wrapper input:disabled ~ .questions-form__checkbox-text {
   opacity: 0.4;
 }

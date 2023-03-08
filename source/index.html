@@ -330,7 +330,7 @@
               <div class="questions-form__input custom-input" data-validate-type="text" data-limitation="name"
                 data-message-base="Обязательное поле" data-message-extra="Проверьте корректность заполнения поля"
                 data-required>
-                <input type="text" name="name" placeholder="Имя" aria-label="Укажите свое имя." required>
+                <input type="text" name="name" placeholder="Имя" aria-label="Укажите свое имя." required data-autofocus="true">
               </div>
               <div class="custom-input" data-validate-type="phone" data-message-extra="Поле заполнено не верно"
                 data-message-base="Обязательное поле" data-message-success="Поле заполнено верно" data-on-input-validate
@@ -344,7 +344,7 @@
               </div>
             </fieldset>
             <div class="questions-form__personal-data-wrapper questions-form__personal-data-wrapper--modal">
-              <div class="questions-form__checkbox-wrapper questions-form__checkbox-wrapper--modal custom-toggle custom-toggle--checkbox" data-on-input-validate
+              <div class="questions-form__checkbox-wrapper questions-form__checkbox-wrapper--modal custom-toggle custom-toggle--checkbox custom-toggle--modal" data-on-input-validate
                 data-validate-type="checkbox" data-message-base="Обязательно к заполнению">
                 <label>
                   <input class="visually-hidden" type="checkbox" name="personal-data" checked required>
