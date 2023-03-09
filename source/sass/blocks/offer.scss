@@ -1,3 +1,6 @@
+/* stylelint-disable */
+// Отключение stylelint используется только для возможности использования изображений в формате Webp,
+// т.к. происходит задвоение background-image
 .offer {
   padding-top: 305px;
   padding-bottom: 280px;
@@ -6,6 +9,8 @@
   background-color: $color-default-black;
   background-image: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%),
     url("../../img/background-desktop.jpg");
+  background-image: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%),
+    -webkit-image-set(url("../../img/background-desktop.webp") 1x);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -14,6 +19,8 @@
     @media (min-resolution: 2dppx) {
       background-image: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%),
         url("../../img/background-desktop-2x.jpg");
+      background-image: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%),
+        -webkit-image-set(url("../../img/background-desktop-2x.webp") 2x);
       min-height: 880px;
       width: auto;
     }
@@ -25,10 +32,14 @@
     min-height: 640px;
     background-image: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%),
       url("../../img/background-tablet.jpg");
+    background-image: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%),
+      -webkit-image-set(url("../../img/background-tablet.webp") 1x);
 
     @media (min-resolution: 2dppx) {
       background-image: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%),
         url("../../img/background-tablet-2x.jpg");
+      background-image: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%),
+        -webkit-image-set(url("../../img/background-tablet-2x.webp") 2x);
       min-height: 640px;
       width: auto;
     }
@@ -40,15 +51,21 @@
     min-height: 560px;
     background-image: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%),
       url("../../img/background-mobile.jpg");
+    background-image: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%),
+      -webkit-image-set(url("../../img/background-mobile.webp")1x);
 
     @media (min-resolution: 2dppx) {
       background-image: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%),
         url("../../img/background-mobile-2x.jpg");
+      background-image: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%),
+        -webkit-image-set(url("../../img/background-mobile-2x.webp")2x);
       min-height: 560px;
       width: auto;
     }
   }
 }
+
+/* stylelint-enable */
 
 .offer__title {
   margin: 0;
