@@ -811,6 +811,7 @@ button,
 .card {
   position: relative;
   min-height: 650px;
+  background-color: #041427;
 }
 
 .card:hover,
@@ -822,38 +823,10 @@ button,
   opacity: 0.4;
 }
 
-.card:nth-child(3n+1) {
-  background-color: #041427;
-  background-image: url("../../img/card-desktop-background-1.jpg");
-  background-image: -webkit-image-set(url("../../img/card-desktop-background-1.webp") 1x);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.card:nth-child(3n+2) {
-  background-color: #041427;
-  background-image: url("../../img/card-desktop-background-2.jpg");
-  background-image: -webkit-image-set(url("../../img/card-desktop-background-2.webp") 1x);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.card:nth-child(3n+3) {
-  background-color: #041427;
-  background-image: url("../../img/card-desktop-background-3.jpg");
-  background-image: -webkit-image-set(url("../../img/card-desktop-background-3.webp") 1x);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
 .card__link {
   display: block;
   width: 100%;
   height: 100%;
-  padding: 50px 40px;
   font-family: "Roboto Condensed", "Arial", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -886,7 +859,22 @@ button,
   background-size: 4px 8px;
 }
 
-.card__text--br br {
+.card__img {
+  display: block;
+  width: 350px;
+  height: 650px;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+.card__text {
+  position: absolute;
+  top: 50px;
+  left: 40px;
+  max-width: 77.1%;
+}
+
+.card__text-part--br br {
   display: none;
 }
 
@@ -1775,9 +1763,6 @@ button,
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(71.72%, rgba(25, 32, 36, 0.7)), to(rgba(25, 32, 36, 0))), url("../../img/background-desktop.jpg");
   background-image: -o-linear-gradient(top, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), url("../../img/background-desktop.jpg");
   background-image: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), url("../../img/background-desktop.jpg");
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(71.72%, rgba(25, 32, 36, 0.7)), to(rgba(25, 32, 36, 0))), -webkit-image-set(url("../../img/background-desktop.webp") 1x);
-  background-image: -o-linear-gradient(top, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), -webkit-image-set(url("../../img/background-desktop.webp") 1x);
-  background-image: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), -webkit-image-set(url("../../img/background-desktop.webp") 1x);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -1819,42 +1804,21 @@ button,
   scroll-behavior: smooth;
 }
 
-@media (min-width: 1024px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 1024px) and (-o-min-device-pixel-ratio: 2/1), (min-width: 1024px) and (min-resolution: 2dppx) {
-  .card:nth-child(3n+1) {
-    background-image: url("../../img/card-desktop-background-1-2x.jpg");
-    background-image: -webkit-image-set(url("../../img/card-desktop-background-1-2x.webp") 2x);
-    background-size: cover;
-  }
-
-  .card:nth-child(3n+2) {
-    background-image: url("../../img/card-desktop-background-2-2x.jpg");
-    background-image: -webkit-image-set(url("../../img/card-desktop-background-2-2x.webp") 2x);
-    background-size: cover;
-  }
-
-  .card:nth-child(3n+3) {
-    background-image: url("../../img/card-desktop-background-3-2x.jpg");
-    background-image: -webkit-image-set(url("../../img/card-desktop-background-3-2x.webp") 2x);
-    background-size: cover;
-  }
-
-  .offer {
-    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(71.72%, rgba(25, 32, 36, 0.7)), to(rgba(25, 32, 36, 0))), url("../../img/background-desktop-2x.jpg");
-    background-image: -o-linear-gradient(top, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), url("../../img/background-desktop-2x.jpg");
-    background-image: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), url("../../img/background-desktop-2x.jpg");
-    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(71.72%, rgba(25, 32, 36, 0.7)), to(rgba(25, 32, 36, 0))), -webkit-image-set(url("../../img/background-desktop-2x.webp") 2x);
-    background-image: -o-linear-gradient(top, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), -webkit-image-set(url("../../img/background-desktop-2x.webp") 2x);
-    background-image: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), -webkit-image-set(url("../../img/background-desktop-2x.webp") 2x);
-    min-height: 880px;
-    width: auto;
-  }
-}
-
 @media (min-width: 1024px) {
   .header__fixed {
     position: fixed;
     left: 0;
     top: 0;
+  }
+}
+
+@media (min-width: 1024px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 1024px) and (-o-min-device-pixel-ratio: 2/1), (min-width: 1024px) and (min-resolution: 2dppx) {
+  .offer {
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(71.72%, rgba(25, 32, 36, 0.7)), to(rgba(25, 32, 36, 0))), url("../../img/background-desktop-2x.jpg");
+    background-image: -o-linear-gradient(top, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), url("../../img/background-desktop-2x.jpg");
+    background-image: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), url("../../img/background-desktop-2x.jpg");
+    min-height: 880px;
+    width: auto;
   }
 }
 
@@ -1939,30 +1903,22 @@ button,
     min-height: 250px;
   }
 
-  .card:nth-child(3n+1) {
-    background-image: url("../../img/card-tablet-background-1.jpg");
-    background-image: -webkit-image-set(url("../../img/card-tablet-background-1.webp") 1x);
+  .card__img {
+    width: 923px;
+    height: auto;
   }
 
-  .card:nth-child(3n+2) {
-    background-image: url("../../img/card-tablet-background-2.jpg");
-    background-image: -webkit-image-set(url("../../img/card-tablet-background-2.webp") 1x);
+  .card__text {
+    top: 40px;
+    left: 45px;
+    max-width: 86.5%;
   }
 
-  .card:nth-child(3n+3) {
-    background-image: url("../../img/card-tablet-background-3.jpg");
-    background-image: -webkit-image-set(url("../../img/card-tablet-background-3.webp") 1x);
-  }
-
-  .card__link {
-    padding: 40px 45px;
-  }
-
-  .card__text--br br {
+  .card__text-part--br br {
     display: inline;
   }
 
-  .card__text--br-mobile br {
+  .card__text-part--br-mobile br {
     display: none;
   }
 
@@ -2168,9 +2124,6 @@ button,
     background-image: -webkit-gradient(linear, left top, left bottom, color-stop(71.72%, rgba(25, 32, 36, 0.7)), to(rgba(25, 32, 36, 0))), url("../../img/background-tablet.jpg");
     background-image: -o-linear-gradient(top, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), url("../../img/background-tablet.jpg");
     background-image: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), url("../../img/background-tablet.jpg");
-    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(71.72%, rgba(25, 32, 36, 0.7)), to(rgba(25, 32, 36, 0))), -webkit-image-set(url("../../img/background-tablet.webp") 1x);
-    background-image: -o-linear-gradient(top, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), -webkit-image-set(url("../../img/background-tablet.webp") 1x);
-    background-image: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), -webkit-image-set(url("../../img/background-tablet.webp") 1x);
   }
 
   .offer__title {
@@ -2189,31 +2142,10 @@ button,
 }
 
 @media (max-width: 1023px) and (-webkit-min-device-pixel-ratio: 2), (max-width: 1023px) and (-o-min-device-pixel-ratio: 2/1), (max-width: 1023px) and (min-resolution: 2dppx) {
-  .card:nth-child(3n+1) {
-    background-image: url("../../img/card-tablet-background-1-2x.jpg");
-    background-image: -webkit-image-set(url("../../img/card-tablet-background-1-2x.webp") 2x);
-    background-size: cover;
-  }
-
-  .card:nth-child(3n+2) {
-    background-image: url("../../img/card-tablet-background-2-2x.jpg");
-    background-image: -webkit-image-set(url("../../img/card-tablet-background-2-2x.webp") 2x);
-    background-size: cover;
-  }
-
-  .card:nth-child(3n+3) {
-    background-image: url("../../img/card-tablet-background-3-2x.jpg");
-    background-image: -webkit-image-set(url("../../img/card-tablet-background-3-2x.webp") 2x);
-    background-size: cover;
-  }
-
   .offer {
     background-image: -webkit-gradient(linear, left top, left bottom, color-stop(71.72%, rgba(25, 32, 36, 0.7)), to(rgba(25, 32, 36, 0))), url("../../img/background-tablet-2x.jpg");
     background-image: -o-linear-gradient(top, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), url("../../img/background-tablet-2x.jpg");
     background-image: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), url("../../img/background-tablet-2x.jpg");
-    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(71.72%, rgba(25, 32, 36, 0.7)), to(rgba(25, 32, 36, 0))), -webkit-image-set(url("../../img/background-tablet-2x.webp") 2x);
-    background-image: -o-linear-gradient(top, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), -webkit-image-set(url("../../img/background-tablet-2x.webp") 2x);
-    background-image: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), -webkit-image-set(url("../../img/background-tablet-2x.webp") 2x);
     min-height: 640px;
     width: auto;
   }
@@ -2362,21 +2294,6 @@ button,
     display: inline;
   }
 
-  .card:nth-child(3n+1) {
-    background-image: url("../../img/card-mobile-background-1.jpg");
-    background-image: -webkit-image-set(url("../../img/card-mobile-background-1.webp") 1x);
-  }
-
-  .card:nth-child(3n+2) {
-    background-image: url("../../img/card-mobile-background-2.jpg");
-    background-image: -webkit-image-set(url("../../img/card-mobile-background-2.webp") 1x);
-  }
-
-  .card:nth-child(3n+3) {
-    background-image: url("../../img/card-mobile-background-3.jpg");
-    background-image: -webkit-image-set(url("../../img/card-mobile-background-3.webp") 1x);
-  }
-
   .card__link::before {
     width: 40px;
     height: 40px;
@@ -2386,7 +2303,17 @@ button,
   .card__link {
     font-size: 18px;
     line-height: 30px;
-    padding: 25px 30px;
+  }
+
+  .card__img {
+    width: 717px;
+    height: auto;
+  }
+
+  .card__text {
+    top: 25px;
+    left: 30px;
+    max-width: 77.7%;
   }
 
   .company-info__wrapper {
@@ -2607,9 +2534,6 @@ button,
     background-image: -webkit-gradient(linear, left top, left bottom, color-stop(71.72%, rgba(25, 32, 36, 0.7)), to(rgba(25, 32, 36, 0))), url("../../img/background-mobile.jpg");
     background-image: -o-linear-gradient(top, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), url("../../img/background-mobile.jpg");
     background-image: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), url("../../img/background-mobile.jpg");
-    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(71.72%, rgba(25, 32, 36, 0.7)), to(rgba(25, 32, 36, 0))), -webkit-image-set(url("../../img/background-mobile.webp") 1x);
-    background-image: -o-linear-gradient(top, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), -webkit-image-set(url("../../img/background-mobile.webp") 1x);
-    background-image: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), -webkit-image-set(url("../../img/background-mobile.webp") 1x);
   }
 
   .offer__title {
@@ -2640,31 +2564,10 @@ button,
 }
 
 @media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2), (max-width: 767px) and (-o-min-device-pixel-ratio: 2/1), (max-width: 767px) and (min-resolution: 2dppx) {
-  .card:nth-child(3n+1) {
-    background-image: url("../../img/card-mobile-background-1-2x.jpg");
-    background-image: -webkit-image-set(url("../../img/card-mobile-background-1-2x.webp") 2x);
-    background-size: cover;
-  }
-
-  .card:nth-child(3n+2) {
-    background-image: url("../../img/card-mobile-background-2-2x.jpg");
-    background-image: -webkit-image-set(url("../../img/card-mobile-background-2-2x.webp") 2x);
-    background-size: cover;
-  }
-
-  .card:nth-child(3n+3) {
-    background-image: url("../../img/card-mobile-background-3-2x.jpg");
-    background-image: -webkit-image-set(url("../../img/card-mobile-background-3-2x.webp") 2x);
-    background-size: cover;
-  }
-
   .offer {
     background-image: -webkit-gradient(linear, left top, left bottom, color-stop(71.72%, rgba(25, 32, 36, 0.7)), to(rgba(25, 32, 36, 0))), url("../../img/background-mobile-2x.jpg");
     background-image: -o-linear-gradient(top, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), url("../../img/background-mobile-2x.jpg");
     background-image: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), url("../../img/background-mobile-2x.jpg");
-    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(71.72%, rgba(25, 32, 36, 0.7)), to(rgba(25, 32, 36, 0))), -webkit-image-set(url("../../img/background-mobile-2x.webp") 2x);
-    background-image: -o-linear-gradient(top, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), -webkit-image-set(url("../../img/background-mobile-2x.webp") 2x);
-    background-image: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), -webkit-image-set(url("../../img/background-mobile-2x.webp") 2x);
     min-height: 560px;
     width: auto;
   }
