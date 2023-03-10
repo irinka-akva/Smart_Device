@@ -3,7 +3,7 @@ import {initModals} from './modules/modals/init-modals';
 import {Form} from './modules/form-validate/form';
 import {scrollAddHandler} from './modules/header-scroll';
 import {initAccordions} from './modules/accordion/init-accordion';
-import {buttonSwitchHandler} from './modules/accordion/accordions-switcher';
+import {buttonSwitchHandler, accordionSwitchHandler} from './modules/accordion/accordions-switcher';
 import {extraTextOpenAndCloseHandler} from './modules/show-more';
 
 // ---------------------------------
@@ -29,6 +29,7 @@ window.addEventListener('DOMContentLoaded', () => {
     window.form = form;
     form.init();
     buttonSwitchHandler();
+    accordionSwitchHandler();
   });
 });
 
