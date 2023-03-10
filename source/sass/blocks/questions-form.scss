@@ -6,7 +6,7 @@
     transform: translate(0, -50%);
     width: 26.56%;
     height: 60%;
-    background-image: url("../../img/svg/airplane.svg");
+    background-image: url("../img/svg/airplane.svg");
     background-repeat: no-repeat;
     background-size: 100% auto;
   }
@@ -61,7 +61,7 @@
 
 .questions-form fieldset {
   margin: 0;
-  margin-bottom: 32px;
+  margin-bottom: 35px;
   padding: 0;
   border: none;
   display: grid;
@@ -75,7 +75,7 @@
 
   @include vp-767 {
     grid-template-columns: 1fr;
-    margin-bottom: 29px;
+    margin-bottom: 31px;
     row-gap: 18px;
   }
 }
@@ -216,7 +216,7 @@
   margin: auto;
   width: 7px;
   height: 5px;
-  background-image: url("../../img/svg/tick.svg");
+  background-image: url("../img/svg/tick.svg");
   background-repeat: no-repeat;
   background-position: center;
 }

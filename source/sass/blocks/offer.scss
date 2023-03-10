@@ -5,7 +5,7 @@
   width: auto;
   background-color: $color-default-black;
   background-image: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%),
-    url("../../img/background-desktop.jpg");
+    url("../img/background-desktop.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -13,7 +13,7 @@
   @media (min-width: $vp-1024) {
     @media (min-resolution: 2dppx) {
       background-image: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%),
-        url("../../img/background-desktop-2x.jpg");
+        url("../img/background-desktop-2x.jpg");
       min-height: 880px;
       width: auto;
     }
@@ -24,11 +24,11 @@
     padding-bottom: 205px;
     min-height: 640px;
     background-image: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%),
-      url("../../img/background-tablet.jpg");
+      url("../img/background-tablet.jpg");
 
     @media (min-resolution: 2dppx) {
       background-image: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%),
-        url("../../img/background-tablet-2x.jpg");
+        url("../img/background-tablet-2x.jpg");
       min-height: 640px;
       width: auto;
     }
@@ -39,11 +39,11 @@
     padding-bottom: 190px;
     min-height: 560px;
     background-image: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%),
-      url("../../img/background-mobile.jpg");
+      url("../img/background-mobile.jpg");
 
     @media (min-resolution: 2dppx) {
       background-image: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%),
-        url("../../img/background-mobile-2x.jpg");
+        url("../img/background-mobile-2x.jpg");
       min-height: 560px;
       width: auto;
     }

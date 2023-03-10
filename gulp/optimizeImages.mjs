@@ -16,7 +16,7 @@ const sprite = () =>
 
 const optimizeSvg = () =>
   gulp
-      .src('build/img/**/*.svg')
+      .src(['build/img/**/*.svg', '!build/img/svg/airplane.svg', '!build/img/svg/year.svg'])
       .pipe(
           imagemin([
             svgo({
@@ -35,6 +35,10 @@ const optimizeSvg = () =>
                 }],
             })]))
       .pipe(gulp.dest('build/img'));
+
+  const copySvgExtra = () =>
+  gulp.src(['build/img/svg/airplane.svg', 'build/img/svg/year.svg'], {base: 'source'})
+      .pipe(gulp.dest('build'));
 
 const optimizeJpg = () =>
   gulp
@@ -74,4 +78,4 @@ const createWebp = () => {
       .pipe(gulp.dest(`source/img/${root}`));
 };
 
-export {sprite, createWebp, optimizeSvg, optimizePng, optimizeJpg};
+export {sprite, createWebp, optimizeSvg, optimizePng, optimizeJpg, copySvgExtra};
