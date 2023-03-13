@@ -1,6 +1,8 @@
 const accordionButtons = document.querySelectorAll('[data-accordion="button"]');
-const closeElements = document.querySelectorAll('[data-accordion="element"]:not(.is-active)');
-const openElements = document.querySelectorAll('[data-accordion="element"].is-active');
+// const closeElements = document.getElementsByClassName('accordion__element:not(is-active)');
+const openElement = document.getElementsByClassName('accordion__element is-active');
+const accordionLinks = document.querySelectorAll('.footer__contacts-list-link');
+
 
 const getSwitcherButton = () => {
   if (window.innerWidth <= 767) {
@@ -15,56 +17,42 @@ const buttonSwitchHandler = () => {
 };
 
 
+// настройка списка
 
 const getSwitcherList = () => {
   if (window.innerWidth <= 767) {
-
-    openElements.forEach((openElement) => {
-      const accordionActiveItems = openElement.querySelector('.footer__contacts-list-link');
-
-      accordionActiveItems.forEach((activeItem) => {
-        activeItem.setAttribute('tabindex', '0');
-      });
+    console.log(openElement);
+    accordionLinks.forEach((activeItem) => {
+      activeItem.setAttribute('tabindex', '-1');
     });
 
-    closeElements.forEach((closeElement) => {
-      const accordionClosedItems = closeElement.querySelector('.footer__contacts-list-link');
-
-      accordionClosedItems.forEach((closedItems) => {
-        closedItems.setAttribute('tabindex', '-1');
+    if (openElement) {
+      // console.log(openElement);
+      const accordionActiveItems = openElement.querySelectorAll('.footer__contacts-list-link');
+      // console.log(accordionActiveItems);
+      accordionActiveItems.forEach((activeItem) => {
+        activeItem.removeAttribute('tabindex');
       });
+    } else {
+      accordionLinks.forEach((activeItem) => {
+        activeItem.setAttribute('tabindex', '-1');
+      });
+
+    }
+  } else {
+    accordionLinks.forEach((activeItem) => {
+      activeItem.removeAttribute('tabindex');
     });
   }
 };
 
 const accordionSwitchHandler = () => {
-  accordionButtons.forEach((element) => {
-    element.addEventListener('click', getSwitcherList);
-    element.addEventListener('keydown', getSwitcherList);
-  });
+  // accordionButtons.forEach((element) => {
+  //   element.addEventListener('click', getSwitcherList);
+  //   element.addEventListener('keydown', getSwitcherList);
+  // });
+  window.addEventListener('keydown', getSwitcherList);
 };
 
 
 export {buttonSwitchHandler, accordionSwitchHandler};
-
-
-  // if (activeElements !== 'undefined') {
-  //   activeElements.document.querySelectorAll('.footer__contacts-list-link').forEach((element) => {
-  //     element.setAttribute('tabindex', '0');
-  //   });
-  // } else {
-  //   activeElements.document.querySelectorAll('.footer__contacts-list-link').forEach((element) => {
-  //     element.removeAttribute('tabindex', '0');
-  //     element.setAttribute('tabindex', '-1');
-  //   });
-  // }
-
-
-// const getActiveElements = () => {
-//   for (let i = 0, length = elsP.length; i < length; i++) {
-//     if (accordionElements[i].classList.contains('is-active')) {
-// const activeElements =
-//     }
-//   }
-// }
-// };
