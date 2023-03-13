@@ -1,8 +1,8 @@
 const accordionButtons = document.querySelectorAll('[data-accordion="button"]');
-// const closeElements = document.getElementsByClassName('accordion__element:not(is-active)');
 const openElement = document.getElementsByClassName('accordion__element is-active');
-const accordionLinks = document.querySelectorAll('.footer__contacts-list-link');
+const accordionLinks = document.querySelectorAll('[data-accordion="element-link"]');
 
+// настройка переключения заголовков аккордеона по Tab
 
 const getSwitcherButton = () => {
   if (window.innerWidth <= 767) {
@@ -16,20 +16,17 @@ const buttonSwitchHandler = () => {
   window.addEventListener('keydown', getSwitcherButton);
 };
 
-
-// настройка списка
+// настройка переключения списка аккордеона по Tab
 
 const getSwitcherList = () => {
   if (window.innerWidth <= 767) {
-    console.log(openElement);
     accordionLinks.forEach((activeItem) => {
       activeItem.setAttribute('tabindex', '-1');
     });
 
-    if (openElement) {
-      // console.log(openElement);
-      const accordionActiveItems = openElement.querySelectorAll('.footer__contacts-list-link');
-      // console.log(accordionActiveItems);
+    if (openElement.length !== 0) {
+      const openElementArray = Array.from(openElement);
+      const accordionActiveItems = openElementArray[0].querySelectorAll('[data-accordion="element-link"]');
       accordionActiveItems.forEach((activeItem) => {
         activeItem.removeAttribute('tabindex');
       });
@@ -37,7 +34,6 @@ const getSwitcherList = () => {
       accordionLinks.forEach((activeItem) => {
         activeItem.setAttribute('tabindex', '-1');
       });
-
     }
   } else {
     accordionLinks.forEach((activeItem) => {
@@ -47,11 +43,10 @@ const getSwitcherList = () => {
 };
 
 const accordionSwitchHandler = () => {
-  // accordionButtons.forEach((element) => {
-  //   element.addEventListener('click', getSwitcherList);
-  //   element.addEventListener('keydown', getSwitcherList);
-  // });
-  window.addEventListener('keydown', getSwitcherList);
+  accordionButtons.forEach((element) => {
+    element.addEventListener('click', getSwitcherList);
+    element.addEventListener('keydown', getSwitcherList);
+  });
 };
 
 
