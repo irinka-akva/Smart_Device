@@ -18,7 +18,7 @@
 }
 
 .footer__container-paddings {
-  max-width: 1220px;
+  max-width: 100%;
 
   @include vp-767 {
     padding: 0 25px;
@@ -147,8 +147,7 @@
 
   &--nav {
     min-width: 430px;
-    max-width: 1220px;
-    margin-right: 10px;
+    width: 49.2%;
 
     @include vp-1023 {
       width: 52.2%;
@@ -224,6 +223,17 @@
   }
 }
 
+.footer__contacts-list-inner {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 46.8%;
+
+  @include vp-1023 {
+    width: auto;
+  }
+}
+
 .footer__contacts-list {
   list-style-type: none;
   margin: 0;
@@ -231,17 +241,15 @@
 
   &--nav {
     display: flex;
-    align-content: space-between;
-    flex-direction: column;
+    justify-content: space-between;
     flex-wrap: wrap;
-    height: 150px;
-    // overflow: hidden;
     padding-left: 21.7%;
     width: 100%;
     max-width: 1220px;
     min-width: auto;
 
     @include vp-1023 {
+      display: block;
       max-height: 0;
       height: auto;
       padding-left: 0;
@@ -253,55 +261,25 @@
   }
 }
 
-.footer__contacts-list-item:not(:last-child) {
+.footer__contacts-list-item {
   padding-bottom: 7px;
+  word-wrap: break-word;
 
   @include vp-1023 {
     padding-bottom: 7.5px;
+    padding-right: 0;
   }
 
   @include vp-767 {
     padding-bottom: 20px;
-  }
-}
-
-.footer__contacts-list-item--tel:not(:last-child) {
-  @include vp-1023 {
-    padding-bottom: 5px;
-  }
-
-  @include vp-767 {
-    padding-bottom: 10px;
+    font-size: 14px;
+    line-height: 19px;
   }
 }
 
 .footer__contacts-list-item:last-child {
   @include vp-767 {
     padding-bottom: 20px;
-  }
-}
-
-.footer__contacts-list-item {
-  word-wrap: break-word;
-
-  @include vp-1023 {
-    padding-right: 0;
-  }
-
-  @include vp-767 {
-    font-size: 14px;
-    line-height: 19px;
-  }
-
-  &--nav {
-    // width: 48.2%;
-    max-width: 220px;
-    min-width: 208px;
-
-    @include vp-1023 {
-      min-width: auto;
-      width: auto;
-    }
   }
 }
 

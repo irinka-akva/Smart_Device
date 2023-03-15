@@ -1031,7 +1031,7 @@ button,
 }
 
 .footer__container-paddings {
-  max-width: 1220px;
+  max-width: 100%;
 }
 
 .footer__wrapper {
@@ -1122,8 +1122,7 @@ button,
 
 .footer__contacts--nav {
   min-width: 430px;
-  max-width: 1220px;
-  margin-right: 10px;
+  width: 49.2%;
 }
 
 .footer__contacts--address {
@@ -1162,6 +1161,13 @@ button,
   margin-left: 21.7%;
 }
 
+.footer__contacts-list-inner {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 46.8%;
+}
+
 .footer__contacts-list {
   list-style-type: none;
   margin: 0;
@@ -1172,32 +1178,23 @@ button,
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-line-pack: justify;
-  align-content: space-between;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  height: 150px;
   padding-left: 21.7%;
   width: 100%;
   max-width: 1220px;
   min-width: auto;
 }
 
-.footer__contacts-list-item:not(:last-child) {
+.footer__contacts-list-item {
   padding-bottom: 7px;
 }
 
 .footer__contacts-list-item {
   word-wrap: break-word;
-}
-
-.footer__contacts-list-item--nav {
-  max-width: 220px;
-  min-width: 208px;
 }
 
 .footer__contacts-list-link {
@@ -2025,27 +2022,23 @@ button,
     padding-left: 0;
   }
 
+  .footer__contacts-list-inner {
+    width: auto;
+  }
+
   .footer__contacts-list--nav {
+    display: block;
     max-height: 0;
     height: auto;
     padding-left: 0;
   }
 
-  .footer__contacts-list-item:not(:last-child) {
+  .footer__contacts-list-item {
     padding-bottom: 7.5px;
-  }
-
-  .footer__contacts-list-item--tel:not(:last-child) {
-    padding-bottom: 5px;
   }
 
   .footer__contacts-list-item {
     padding-right: 0;
-  }
-
-  .footer__contacts-list-item--nav {
-    min-width: auto;
-    width: auto;
   }
 
   .header {
@@ -2460,12 +2453,8 @@ button,
     flex-wrap: nowrap;
   }
 
-  .footer__contacts-list-item:not(:last-child) {
+  .footer__contacts-list-item {
     padding-bottom: 20px;
-  }
-
-  .footer__contacts-list-item--tel:not(:last-child) {
-    padding-bottom: 10px;
   }
 
   .footer__contacts-list-item:last-child {
