@@ -1030,9 +1030,13 @@ button,
   padding-bottom: 55px;
 }
 
+.footer__container-paddings {
+  max-width: 1220px;
+}
+
 .footer__wrapper {
   width: 17.6%;
-  min-width: 215px;
+  min-width: 213px;
 }
 
 .footer__container {
@@ -1117,12 +1121,14 @@ button,
 }
 
 .footer__contacts--nav {
-  width: 49.2%;
   min-width: 430px;
+  max-width: 1220px;
+  margin-right: 10px;
 }
 
 .footer__contacts--address {
   width: 28.3%;
+  min-width: 185px;
 }
 
 .footer__contacts-title {
@@ -1137,6 +1143,8 @@ button,
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
   -webkit-box-pack: start;
   -ms-flex-pack: start;
   justify-content: flex-start;
@@ -1173,8 +1181,10 @@ button,
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   height: 150px;
-  overflow: hidden;
   padding-left: 21.7%;
+  width: 100%;
+  max-width: 1220px;
+  min-width: auto;
 }
 
 .footer__contacts-list-item:not(:last-child) {
@@ -1186,9 +1196,8 @@ button,
 }
 
 .footer__contacts-list-item--nav {
-  width: 48.2%;
   max-width: 220px;
-  min-width: 208;
+  min-width: 208px;
 }
 
 .footer__contacts-list-link {
@@ -2005,6 +2014,7 @@ button,
 
   .footer__contacts--address {
     width: 47.8%;
+    min-width: auto;
   }
 
   .footer__contacts-title--nav {
@@ -2295,6 +2305,11 @@ button,
     display: inline;
   }
 
+  .card {
+    min-height: auto;
+    max-height: 250px;
+  }
+
   .card__link::before {
     width: 40px;
     height: 40px;
@@ -2309,6 +2324,7 @@ button,
   .card__img {
     width: 717px;
     height: auto;
+    max-height: 250px;
   }
 
   .card__text {
@@ -2377,7 +2393,7 @@ button,
   }
 
   .footer {
-    min-height: 475px;
+    min-height: auto;
     padding-top: 35px;
     padding-bottom: 35px;
   }
